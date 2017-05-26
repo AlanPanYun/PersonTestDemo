@@ -40,9 +40,8 @@ public class FragmentTopBarActivity extends BaseFragmentBindingActivity {
 
     @Override
     protected void initView() {
-        mDetailTopBarBinding.tvTitle.setText("测试");
-    }
 
+    }
 
     protected void initTopBar(boolean b) {
         mToolbar = getTopBar();
