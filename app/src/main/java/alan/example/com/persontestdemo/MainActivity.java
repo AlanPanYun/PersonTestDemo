@@ -9,6 +9,7 @@ import alan.example.com.persontestdemo.base.activity.BaseBindingActivity;
 import alan.example.com.persontestdemo.base.activity.withbar.FragmentTopBarActivity;
 import alan.example.com.persontestdemo.base.module.TestFragment;
 import alan.example.com.persontestdemo.databinding.ActivityMainBinding;
+import alan.example.com.persontestdemo.recyclerview.RecyclerViewActivity;
 import alan.example.com.persontestdemo.statubar.StatuBarMainActivity;
 
 public class MainActivity extends BaseBindingActivity implements View.OnClickListener {
@@ -30,6 +31,7 @@ public class MainActivity extends BaseBindingActivity implements View.OnClickLis
     protected void addLisenter() {
         mActivityMainBinding.button.setOnClickListener(this);
         mActivityMainBinding.buttonStatubar.setOnClickListener(this);
+        mActivityMainBinding.buttonRecyclerview.setOnClickListener(this);
     }
 
     @Override
@@ -56,10 +58,13 @@ public class MainActivity extends BaseBindingActivity implements View.OnClickLis
                                 )
                         )
                 );
-
                 break;
+
             case R.id.button_statubar:
                 startActivity(new Intent(this, StatuBarMainActivity.class));
+                break;
+            case R.id.button_recyclerview:
+                startActivity(new Intent(this, RecyclerViewActivity.class));
                 break;
         }
     }
