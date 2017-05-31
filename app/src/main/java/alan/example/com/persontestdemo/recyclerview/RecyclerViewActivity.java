@@ -45,7 +45,8 @@ public class RecyclerViewActivity extends BaseBindingActivity {
         mRecyclerViewBinding.rvItems.setAdapter(recyclerAdapter);
         mRecyclerViewBinding.rvItems.setItemAnimator(new DefaultItemAnimator());
         mRecyclerViewBinding.rvItems.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerViewBinding.rvItems.addItemDecoration(new TestDividerItemDercoration(this));
+//        mRecyclerViewBinding.rvItems.addItemDecoration(new FlagItemDecoration(this));
+        mRecyclerViewBinding.rvItems.addItemDecoration(new ColorDividerItemDecoration());
     }
 
     @Override

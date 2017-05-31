@@ -35,8 +35,16 @@ public class TestDividerItemDercoration extends RecyclerView.ItemDecoration {
         mOffsetLeft = context.getResources().getDimension(R.dimen.timeline_item_offset_left);
         mNodeRadius = context.getResources().getDimension(R.dimen.timeline_item_node_radius);
 
-        mIcon = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_access_alarm_black_24dp);
-        mIcon = Bitmap.createScaledBitmap(mIcon, (int) mNodeRadius * 2, (int) mNodeRadius * 2, false);
+        mIcon = BitmapFactory.decodeResource(
+                context.getResources(),
+                R.drawable.ic_access_alarm_black_24dp
+        );
+        mIcon = Bitmap.createScaledBitmap(
+                mIcon,
+                (int) mNodeRadius * 2,
+                (int) mNodeRadius * 2,
+                false
+        );
 
     }
 
