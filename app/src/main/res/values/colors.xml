@@ -7,6 +7,7 @@
 
     <color name="blue">#2F98E9</color>
 
+    <color name="colorTitle">#00f</color>
     <color name="colorContent">#ff333333</color>
     <color name="colorWhite">#fff</color>
 </resources>
