@@ -68,9 +68,12 @@ public class MainActivity extends BaseBindingActivity implements View.OnClickLis
                 startActivity(new Intent(this, RecyclerViewActivity.class));
                 break;
             case R.id.button_FloatingActionButton:
-                startActivity(new Intent(this, NavHomeActivity.class));
+                Intent intent = new Intent(this, NavHomeActivity.class);
+                startActivity(intent);
+                this.overridePendingTransition(R.anim.activity_open,0);
                 break;
         }
     }
+
 
 }
