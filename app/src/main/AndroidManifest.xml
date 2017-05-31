@@ -21,6 +21,10 @@
         <activity android:name=".base.activity.nobar.FragmentNoTopBarActivity" />
 
         <activity android:name=".base.activity.withbar.FragmentTopBarActivity" />
+
+        <activity android:name=".statubar.StatuBarMainActivity" />
+
+        <activity android:name=".recyclerview.RecyclerViewActivity"/>
     </application>
 
 </manifest>
