@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme_No_ActionBar">
+        android:theme="@style/MyThemeBlue">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTask">
@@ -25,6 +25,8 @@
         <activity android:name=".statubar.StatuBarMainActivity" />
 
         <activity android:name=".recyclerview.RecyclerViewActivity"/>
+
+        <activity android:name=".NavHomeActivity"/>
     </application>
 
 </manifest>

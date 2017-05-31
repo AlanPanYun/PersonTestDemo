@@ -32,6 +32,7 @@ public class MainActivity extends BaseBindingActivity implements View.OnClickLis
         mActivityMainBinding.button.setOnClickListener(this);
         mActivityMainBinding.buttonStatubar.setOnClickListener(this);
         mActivityMainBinding.buttonRecyclerview.setOnClickListener(this);
+        mActivityMainBinding.buttonFloatingActionButton.setOnClickListener(this);
     }
 
     @Override
@@ -65,6 +66,9 @@ public class MainActivity extends BaseBindingActivity implements View.OnClickLis
                 break;
             case R.id.button_recyclerview:
                 startActivity(new Intent(this, RecyclerViewActivity.class));
+                break;
+            case R.id.button_FloatingActionButton:
+                startActivity(new Intent(this, NavHomeActivity.class));
                 break;
         }
     }
