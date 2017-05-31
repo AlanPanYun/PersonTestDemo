@@ -20,6 +20,18 @@
         <item name="drawerArrowStyle">@style/AppTheme.MyDrawerArrowStyle</item>
     </style>
 
+    <!-- 我们以蓝色为主色调 -->
+    <style name="MyThemeBlue" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!--选中状态icon的颜色和字体颜色-->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue</item>
+        <item name="colorAccent">@color/blue</item>
+        <!--正常状态下字体颜色和icon颜色-->
+        <!--<item name="android:textColorPrimary">@color/colorTheme</item>-->
+    </style>
+
+
     <style name="AppTheme.MyDrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <!--將 spinBars 屬性設定為 false-->
         <!--<item name="spinBars">false</item>-->

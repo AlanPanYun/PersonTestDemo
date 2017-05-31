@@ -49,10 +49,10 @@ public class ColorDividerItemDecoration extends RecyclerView.ItemDecoration {
                 continue;
             }
 
-            float dividerTop = view.getTop() - mDividerHeight;
-            float dividerLeft = parent.getPaddingLeft();
+            float dividerTop = view.getTop() - mDividerHeight - 5;
+            float dividerLeft = parent.getPaddingLeft() + 8;
             float dividerBottom = view.getTop();
-            float dividerRight = parent.getWidth() - parent.getPaddingRight();
+            float dividerRight = parent.getWidth() - parent.getPaddingRight() - 8;
 
             c.drawRect(
                     dividerLeft,

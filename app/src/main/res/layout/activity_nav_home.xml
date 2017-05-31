@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/nav_home_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="210dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/nav_home_toolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/blue"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:title="@string/app_name">
+
+
+                <ImageView
+                    android:id="@+id/nav_home_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/homepage_header" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/nav_home_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:navigationIcon="@mipmap/icon_back" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nav_home_nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/about_aiya"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:background="@color/colorWhite"
+                        android:lineSpacingExtra="3dp"
+                        android:padding="7dp"
+                        android:text="@string/about_aiyagirl"
+                        android:textColor="@color/colorTitle"
+                        android:textIsSelectable="true" />
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/open"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:lineSpacingExtra="3dp"
+                        android:padding="7dp"
+                        android:text="@string/open_source"
+                        android:textColor="@color/colorTitle"
+                        android:textIsSelectable="true" />
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/contact_me"
+                    android:textColor="@color/colorContent"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="email"
+                        android:background="@color/colorWhite"
+                        android:lineSpacingExtra="3dp"
+                        android:padding="7dp"
+                        android:text="@string/blog"
+                        android:textColor="@color/colorTitle"
+                        android:textIsSelectable="true" />
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/nav_home_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@mipmap/actionbar_share"
+            app:layout_anchor="@id/nav_home_appbar"
+            app:layout_anchorGravity="bottom|end" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

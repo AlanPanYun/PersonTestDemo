@@ -1,7 +1,8 @@
 package alan.example.com.persontestdemo;
 
 import alan.example.com.persontestdemo.base.activity.BaseBindingActivity;
-import alan.example.com.persontestdemo.databinding.ActivityCollisationBinding;
+import alan.example.com.persontestdemo.databinding.ActivityNavHomeBinding;
+import alan.example.com.persontestdemo.utils.StatusBarUtil;
 
 /**
  * Created by qk14 on 2017/5/27.
@@ -9,11 +10,11 @@ import alan.example.com.persontestdemo.databinding.ActivityCollisationBinding;
 
 public class NavHomeActivity extends BaseBindingActivity {
 
-    private ActivityCollisationBinding mCollisationBinding;
+    private ActivityNavHomeBinding mNavHomeBinding;
 
     @Override
     protected void castBindingView() {
-        mCollisationBinding = (ActivityCollisationBinding) mViewDataBinding;
+        mNavHomeBinding = (ActivityNavHomeBinding) mViewDataBinding;
     }
 
     @Override
@@ -22,7 +23,13 @@ public class NavHomeActivity extends BaseBindingActivity {
     }
 
     @Override
+    protected void initView() {
+        super.initView();
+        StatusBarUtil.setTranslucentForImageView(this, 0, mNavHomeBinding.navHomeToolbar);
+    }
+
+    @Override
     protected int getLayoutId() {
-        return R.layout.activity_collisation;
+        return R.layout.activity_nav_home;
     }
 }
