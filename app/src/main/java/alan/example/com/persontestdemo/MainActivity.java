@@ -11,6 +11,7 @@ import alan.example.com.persontestdemo.base.module.TestFragment;
 import alan.example.com.persontestdemo.databinding.ActivityMainBinding;
 import alan.example.com.persontestdemo.recyclerview.RecyclerViewActivity;
 import alan.example.com.persontestdemo.statubar.StatuBarMainActivity;
+import alan.example.com.persontestdemo.video.VideoActivity;
 
 public class MainActivity extends BaseBindingActivity implements View.OnClickListener {
 
@@ -32,6 +33,7 @@ public class MainActivity extends BaseBindingActivity implements View.OnClickLis
         mActivityMainBinding.button.setOnClickListener(this);
         mActivityMainBinding.buttonStatubar.setOnClickListener(this);
         mActivityMainBinding.buttonRecyclerview.setOnClickListener(this);
+        mActivityMainBinding.buttonVideo.setOnClickListener(this);
         mActivityMainBinding.buttonFloatingActionButton.setOnClickListener(this);
     }
 
@@ -69,6 +71,9 @@ public class MainActivity extends BaseBindingActivity implements View.OnClickLis
                 break;
             case R.id.button_FloatingActionButton:
                 startActivity(new Intent(this, NavHomeActivity.class));
+                break;
+            case R.id.button_video:
+                startActivity(new Intent(this, VideoActivity.class));
                 break;
         }
     }

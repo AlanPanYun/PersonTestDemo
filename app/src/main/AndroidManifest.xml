@@ -27,6 +27,12 @@
         <activity android:name=".recyclerview.RecyclerViewActivity"/>
 
         <activity android:name=".NavHomeActivity"/>
+
+        <activity
+        android:name=".video.VideoActivity"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>
