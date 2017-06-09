@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleView">
+        <attr name="fristColor" format="color" />
+        <attr name="secondColor" format="color" />
+        <attr name="thridColor" format="color"/>
+        <attr name="circleWidth" format="dimension" />
+        <attr name="spead" format="integer" />
+    </declare-styleable>
+</resources>

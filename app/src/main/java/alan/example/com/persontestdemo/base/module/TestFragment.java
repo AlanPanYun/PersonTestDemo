@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import alan.example.com.persontestdemo.R;
 import alan.example.com.persontestdemo.base.fragment.BaseBindingFragment;
-import alan.example.com.persontestdemo.base.inter.OnBackPressdActionInterface;
 import alan.example.com.persontestdemo.databinding.FragmentTestBinding;
 
 /**
@@ -28,7 +27,8 @@ public class TestFragment
     public void initView() {
         setTitle("青稞");
 //        mBaseActivity.setMenuId(R.menu.main_menu);
-
+        mTestBinding.cb.setText("12");
+        mTestBinding.cb.setSweepAngle(270);
     }
 
     @Override

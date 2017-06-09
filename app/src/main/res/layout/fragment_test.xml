@@ -17,6 +17,15 @@
             android:layout_height="wrap_content"
             android:text="123456789"
             android:layout_gravity="center"/>
+        
+        <alan.example.com.persontestdemo.CircleBar
+            android:id="@+id/cb"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <alan.example.com.persontestdemo.CircleView
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
     </LinearLayout>
 
 </layout>

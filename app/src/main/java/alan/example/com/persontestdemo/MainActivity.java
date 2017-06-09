@@ -39,7 +39,7 @@ public class MainActivity extends BaseBindingActivity implements View.OnClickLis
 
     @Override
     protected void initView() {
-
+        setTitle("adf");
     }
 
     @Override
