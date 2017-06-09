@@ -1,5 +1,6 @@
 package alan.example.com.persontestdemo.base.module;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -27,8 +28,9 @@ public class TestFragment
     public void initView() {
         setTitle("青稞");
 //        mBaseActivity.setMenuId(R.menu.main_menu);
-        mTestBinding.cb.setText("12");
-        mTestBinding.cb.setSweepAngle(270);
+        mTestBinding.cb.setText("120000");
+        mTestBinding.cb.setTextColor(Color.RED);
+        mTestBinding.cb.setSweepAngle(240);
     }
 
     @Override

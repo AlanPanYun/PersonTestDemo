@@ -27,19 +27,19 @@ public class CircleBar extends View {
     private float mColorWheelRadius;
     private float circleStrokeWidth;//圆圈的线条粗细
     private float pressExtraStrokeWidth;
-    private int mTextColor = getResources().getColor(R.color.blue);//默认文字颜色
-    private int mWheelColor = getResources().getColor(R.color.blue);//默认圆环颜色
+    private int mTextColor = Color.GREEN;//默认文字颜色
+    private int mWheelColor = Color.GREEN;//默认圆环颜色
 
     private String mText;
     private String mTextDes;//文字的描述
     private int mTextDesSize;//描述文字的大小
-    private int mCount;//为了做动画
+    private double mCount;//为了做动画
     private float mSweepAnglePer;//扇形弧度百分比
     private float mSweepAngle;//扇形弧度
     private int mTextSize;//文字大小
     private int mDistance;// 上下文字的距离
     BarAnimation anim;//动画
-    private int TIME = 1000;//时间
+    private int TIME = 2500;//时间
 
     public CircleBar(Context context) {
         super(context);
@@ -56,10 +56,9 @@ public class CircleBar extends View {
         init(attrs, defStyle);
     }
 
-
     private void init(AttributeSet attrs, int defStyle) {
         //初始化一些值
-        circleStrokeWidth = dip2px(getContext(), 10);
+        circleStrokeWidth = dip2px(getContext(), 15);
         pressExtraStrokeWidth = dip2px(getContext(), 2);
         mTextSize = dip2px(getContext(), 30);
         mTextDesSize = dip2px(getContext(), 15);
@@ -100,35 +99,38 @@ public class CircleBar extends View {
     protected void onDraw(Canvas canvas) {
         canvas.drawArc(
                 mColorWheelRectangle,
-                -235,
-                270,
+                -210,
+                240,
                 false,
                 mDefaultWheelPaint);//画外接的圆环
         canvas.drawArc(
                 mColorWheelRectangle,
-                -180,
+                -210,
                 mSweepAnglePer,
                 false,
                 mColorWheelPaint
         );//画圆环
         Rect bounds = new Rect();
-        String textstr = mCount + "";
+        String textstr = "¥" + mCount;
 
         textPaint.getTextBounds(textstr, 0, textstr.length(), bounds);
         textDesPaint.getTextBounds(mTextDes, 0, mTextDes.length(), bounds);
-
+        textPaint.setTextSize(48);
         // drawText各个属性的意思(文字,x坐标,y坐标,画笔)
         canvas.drawText(
                 textstr + "",
-                (mColorWheelRectangle.centerX())
-                        - (textPaint.measureText(textstr) / 2),
-                mColorWheelRectangle.centerY() + bounds.height() / 2 - 50,
-                textPaint);
-        canvas.drawText(mTextDes,
-                (mColorWheelRectangle.centerX())
-                        - (textDesPaint.measureText(mTextDes) / 2),
-                mColorWheelRectangle.centerY() + bounds.height() / 2 - 50 - mDistance
-                , textDesPaint);
+                (mColorWheelRectangle.centerX()) - (textPaint.measureText(textstr) / 2),
+                mColorWheelRectangle.centerY() + bounds.height() / 2 + 20,
+                textPaint
+        );
+        textDesPaint.setColor(Color.GREEN);
+        textDesPaint.setTextSize(28);
+        canvas.drawText(
+                mTextDes,
+                (mColorWheelRectangle.centerX()) - (textDesPaint.measureText(mTextDes) / 2),
+                mColorWheelRectangle.centerY() + bounds.height() / 2 + 20 - mDistance,
+                textDesPaint
+        );
     }
 
     @Override
@@ -141,8 +143,8 @@ public class CircleBar extends View {
         mColorWheelRadius = min - circleStrokeWidth - pressExtraStrokeWidth;
 
         mColorWheelRectangle.set(
-                circleStrokeWidth + pressExtraStrokeWidth,
-                circleStrokeWidth + pressExtraStrokeWidth,
+                circleStrokeWidth + pressExtraStrokeWidth - 10,
+                circleStrokeWidth + pressExtraStrokeWidth - 10,
                 mColorWheelRadius,
                 mColorWheelRadius);
     }
@@ -194,10 +196,11 @@ public class CircleBar extends View {
             //mText和mSweepAngle才是动画结束之后表示扇形弧度和中间数值的真实值。
             if (interpolatedTime < 1.0f) {
                 mSweepAnglePer = interpolatedTime * mSweepAngle;
-                mCount = (int) (interpolatedTime * Float.parseFloat(mText));
+//                mCount = (interpolatedTime * Double.parseDouble(mText));
+                mCount = (  Double.parseDouble(mText));
             } else {
                 mSweepAnglePer = mSweepAngle;
-                mCount = Integer.parseInt(mText);
+                mCount = Double.parseDouble(mText);
             }
             postInvalidate();
         }
