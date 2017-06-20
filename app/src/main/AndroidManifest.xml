@@ -33,6 +33,10 @@
         android:configChanges="orientation|screenSize|keyboardHidden"
         android:screenOrientation="portrait" />
 
+        <activity android:name=".customview.CameraActivity"/>
+        <activity android:name=".customview.TestCameraActivity"/>
+        <activity android:name=".camera.Camera2Activity"/>
+
     </application>
 
 </manifest>

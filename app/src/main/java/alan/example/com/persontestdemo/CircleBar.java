@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
@@ -33,7 +34,8 @@ public class CircleBar extends View {
     private String mText;
     private String mTextDes;//文字的描述
     private int mTextDesSize;//描述文字的大小
-    private double mCount;//为了做动画
+    private int mCount;//为了做动画
+    private String mCounts = null;//为了做动画
     private float mSweepAnglePer;//扇形弧度百分比
     private float mSweepAngle;//扇形弧度
     private int mTextSize;//文字大小
@@ -111,7 +113,12 @@ public class CircleBar extends View {
                 mColorWheelPaint
         );//画圆环
         Rect bounds = new Rect();
-        String textstr = "¥" + mCount;
+        String textstr;
+        if (!TextUtils.isEmpty(mCounts)) {
+            textstr = "¥" + mCounts;
+        } else {
+            textstr = "¥" + mCount;
+        }
 
         textPaint.getTextBounds(textstr, 0, textstr.length(), bounds);
         textDesPaint.getTextBounds(mTextDes, 0, mTextDes.length(), bounds);
@@ -196,11 +203,11 @@ public class CircleBar extends View {
             //mText和mSweepAngle才是动画结束之后表示扇形弧度和中间数值的真实值。
             if (interpolatedTime < 1.0f) {
                 mSweepAnglePer = interpolatedTime * mSweepAngle;
-//                mCount = (interpolatedTime * Double.parseDouble(mText));
-                mCount = (  Double.parseDouble(mText));
+                mCount = (int) (interpolatedTime * Float.parseFloat(mText));
+//                mCount = (  Double.parseDouble(mText));
             } else {
                 mSweepAnglePer = mSweepAngle;
-                mCount = Double.parseDouble(mText);
+                mCounts = mText;
             }
             postInvalidate();
         }

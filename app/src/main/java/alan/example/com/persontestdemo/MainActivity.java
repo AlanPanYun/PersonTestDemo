@@ -8,6 +8,8 @@ import alan.example.com.persontestdemo.base.activity.BaseActivity;
 import alan.example.com.persontestdemo.base.activity.BaseBindingActivity;
 import alan.example.com.persontestdemo.base.activity.withbar.FragmentTopBarActivity;
 import alan.example.com.persontestdemo.base.module.TestFragment;
+import alan.example.com.persontestdemo.camera.Camera2Activity;
+import alan.example.com.persontestdemo.customview.TestCameraActivity;
 import alan.example.com.persontestdemo.databinding.ActivityMainBinding;
 import alan.example.com.persontestdemo.recyclerview.RecyclerViewActivity;
 import alan.example.com.persontestdemo.statubar.StatuBarMainActivity;
@@ -51,16 +53,17 @@ public class MainActivity extends BaseBindingActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.button:
-                startActivity(
-                        FragmentTopBarActivity.makeInstance(
-                                this,
-                                TestFragment.class.getName(),
-                                TestFragment.makeArguments(
-                                        "123",
-                                        "alan"
-                                )
-                        )
-                );
+                startActivity(new Intent(this, Camera2Activity.class));
+//                startActivity(
+//                        FragmentTopBarActivity.makeInstance(
+//                                this,
+//                                TestFragment.class.getName(),
+//                                TestFragment.makeArguments(
+//                                        "123",
+//                                        "alan"
+//                                )
+//                        )
+//                );
                 break;
 
             case R.id.button_statubar:

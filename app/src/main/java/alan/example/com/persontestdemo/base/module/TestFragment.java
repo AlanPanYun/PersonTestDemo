@@ -1,5 +1,6 @@
 package alan.example.com.persontestdemo.base.module;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +10,8 @@ import android.widget.Toast;
 
 import alan.example.com.persontestdemo.R;
 import alan.example.com.persontestdemo.base.fragment.BaseBindingFragment;
+import alan.example.com.persontestdemo.customview.CameraActivity;
+import alan.example.com.persontestdemo.customview.TestCameraActivity;
 import alan.example.com.persontestdemo.databinding.FragmentTestBinding;
 
 /**
@@ -28,7 +31,7 @@ public class TestFragment
     public void initView() {
         setTitle("青稞");
 //        mBaseActivity.setMenuId(R.menu.main_menu);
-        mTestBinding.cb.setText("120000");
+        mTestBinding.cb.setText("12000000.00");
         mTestBinding.cb.setTextColor(Color.RED);
         mTestBinding.cb.setSweepAngle(240);
     }
@@ -96,9 +99,10 @@ public class TestFragment
 //                TestFragment2.class.getName(),
 //                null
 //        ));
-        mTopBarActivity.navigateToMemoryFragment(
-                new TestFragment2(),
-                TestFragment2.class.getSimpleName()
-        );
+//        mTopBarActivity.navigateToMemoryFragment(
+//                new TestFragment2(),
+//                TestFragment2.class.getSimpleName()
+//        );
+        startActivity(new Intent(mActivity, TestCameraActivity.class));
     }
 }
