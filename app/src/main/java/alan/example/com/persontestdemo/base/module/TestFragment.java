@@ -30,7 +30,7 @@ public class TestFragment
     @Override
     public void initView() {
         setTitle("青稞");
-//        mBaseActivity.setMenuId(R.menu.main_menu);
+        mBaseActivity.setMenuId(R.menu.main_menu);
         mTestBinding.cb.setText("12000000.00");
         mTestBinding.cb.setTextColor(Color.RED);
         mTestBinding.cb.setSweepAngle(240);

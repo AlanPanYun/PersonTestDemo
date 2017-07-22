@@ -10,4 +10,5 @@
     <color name="colorTitle">#00f</color>
     <color name="colorContent">#ff333333</color>
     <color name="colorWhite">#fff</color>
+    <color name="camera_bg">#f5bcbcbc</color>
 </resources>

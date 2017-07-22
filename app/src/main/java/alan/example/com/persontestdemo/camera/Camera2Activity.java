@@ -59,6 +59,7 @@ public class Camera2Activity extends AppCompatActivity {
         public void onOpened(CameraDevice cameraDevice) {
             mCameraDevice = cameraDevice;
             createCameraPreview();
+
         }
 
         @Override
@@ -85,7 +86,8 @@ public class Camera2Activity extends AppCompatActivity {
     }
     private CameraCaptureSession mSession;
     private CaptureRequest.Builder mBuilder;
-    private CameraCaptureSession.CaptureCallback mSessionCaptureCallback = new CameraCaptureSession.CaptureCallback() {
+    private CameraCaptureSession.CaptureCallback mSessionCaptureCallback =
+            new CameraCaptureSession.CaptureCallback() {
         @Override
         public void onCaptureStarted(CameraCaptureSession session, CaptureRequest request, long timestamp, long frameNumber) {
             super.onCaptureStarted(session, request, timestamp, frameNumber);
@@ -95,7 +97,7 @@ public class Camera2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_camera2);
         mCameraManager = (CameraManager) getSystemService(CAMERA_SERVICE);
         mTextureView = (TextureView) findViewById(R.id.camera_texture_view);
         mCaptureBtn = (ImageButton) findViewById(R.id.capture_btn);
@@ -106,7 +108,7 @@ public class Camera2Activity extends AppCompatActivity {
                 mWidth = width;
                 mHeight = height;
                 getCameraId();
-                openCamera();
+                openCamera2();
             }
 
             @Override
@@ -165,7 +167,7 @@ public class Camera2Activity extends AppCompatActivity {
         return sizes[0];
     }
 
-    private void openCamera() {
+    private void openCamera2() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {

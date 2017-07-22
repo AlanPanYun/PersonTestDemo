@@ -11,34 +11,74 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
-        <Button
-            android:id="@+id/button_statubar"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2" />
+            android:orientation="horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp">
 
-        <Button
-            android:id="@+id/button_recyclerview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3" />
+            <RadioButton
+                style="@style/Home_button"
+                android:drawableTop="@drawable/ic_home_one_24dp"
+                android:text="新知识" />
 
-    <Button
-            android:id="@+id/button_FloatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4" />
-   <Button
-            android:id="@+id/button_video"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5" />
+            <RadioButton
+                style="@style/Home_button"
+                android:drawableTop="@drawable/ic_home_two_24dp"
+                android:text="新知识" />
+
+            <RadioButton
+                style="@style/Home_button"
+                android:drawableTop="@drawable/ic_home_three_24dp"
+                android:text="新知识" />
+
+            <RadioButton
+                style="@style/Home_button"
+                android:drawableTop="@drawable/ic_home_four_24dp"
+                android:text="新知识" />
+
+            <RadioButton
+                style="@style/Home_button"
+                android:drawableTop="@drawable/ic_home_five_24dp"
+                android:text="新知识" />
+
+        </RadioGroup>
+
+        <!--<Button-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="1" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/button_statubar"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="2" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/button_recyclerview"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="3" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/button_FloatingActionButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="4" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/button_video"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="5" />-->
 
     </LinearLayout>
 
