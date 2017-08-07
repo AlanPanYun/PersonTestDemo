@@ -19,6 +19,11 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         mActivity = activity;
         findView(itemView);
+        addLisenter();
+    }
+
+    protected void addLisenter() {
+
     }
 
     protected void findView(View itemView) {

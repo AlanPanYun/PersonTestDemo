@@ -2,8 +2,6 @@
     <string name="app_name">PersonTestDemo</string>
 
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
     <string name="about_aiya">关于爱吖妹纸</string>
     <string name="open">用到的开源库</string>
     <string name="contact_me">联系我</string>
@@ -40,4 +38,7 @@
     \n\n 我的个人主页：http://www.cnblogs.com/liushilin/
     \n\n 项目完全开源，如果你觉得不错，请帮忙star一下吧，或者点击右上角的分享，分享给你的朋友，这是你对我最大的支持，非常感谢！</string>
 
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>

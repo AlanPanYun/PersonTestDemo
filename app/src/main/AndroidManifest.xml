@@ -44,6 +44,15 @@
 
         <activity android:name=".camera.camera1.CustomCamera2" />
         <activity android:name=".camera.camera4.Camera4Activity"/>
+        <activity android:name=".x.XMainActivity"/>
+        <activity android:name=".x.AlphaChangeActivity"/>
+        <activity android:name=".x.CollapsingToolbarLayoutActivity"/>
+        <activity android:name=".x.EmptyViewActivity"/>
+        <activity android:name=".x.ItemDecorationActivity"/>
+        <activity android:name=".x.GridActivity"/>
+        <activity android:name=".x.LinearActivity"/>
+        <activity android:name=".x.MultiHeaderActivity"/>
+        <activity android:name=".x.StaggeredGridActivity"/>
     </application>
 
 </manifest>

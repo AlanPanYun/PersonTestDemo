@@ -2,6 +2,7 @@ package alan.example.com.persontestdemo.base.fragment;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
@@ -20,6 +21,7 @@ public abstract class BaseFragment extends Fragment {
 
     protected BaseActivity mBaseActivity;
     protected Activity mActivity;
+    protected Context mContext;
     protected FragmentTopBarActivity mTopBarActivity;
 
     @Override
@@ -28,6 +30,7 @@ public abstract class BaseFragment extends Fragment {
 
         setHasOptionsMenu(true);
         mActivity = getActivity();
+        mContext = getContext();
 
         if (mActivity instanceof BaseActivity) {
             mBaseActivity = (BaseActivity) mActivity;

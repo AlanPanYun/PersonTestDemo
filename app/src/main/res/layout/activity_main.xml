@@ -12,6 +12,7 @@
         android:orientation="vertical">
 
         <FrameLayout
+            android:id="@+id/fl_detail"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />
@@ -24,29 +25,34 @@
             android:paddingTop="4dp">
 
             <RadioButton
+                android:id="@+id/rb_one"
                 style="@style/Home_button"
-                android:drawableTop="@drawable/ic_home_one_24dp"
-                android:text="新知识" />
+                android:drawableTop="@drawable/selector_home_one"
+                android:text="RC" />
 
             <RadioButton
+                android:id="@+id/rb_two"
                 style="@style/Home_button"
-                android:drawableTop="@drawable/ic_home_two_24dp"
-                android:text="新知识" />
+                android:drawableTop="@drawable/selector_home_two"
+                android:text="RX" />
 
             <RadioButton
+                android:id="@+id/rb_three"
                 style="@style/Home_button"
-                android:drawableTop="@drawable/ic_home_three_24dp"
-                android:text="新知识" />
+                android:drawableTop="@drawable/selector_home_three"
+                android:text="新知识3" />
 
             <RadioButton
+                android:id="@+id/rb_four"
                 style="@style/Home_button"
-                android:drawableTop="@drawable/ic_home_four_24dp"
-                android:text="新知识" />
+                android:drawableTop="@drawable/selector_home_four"
+                android:text="新知识4" />
 
             <RadioButton
+                android:id="@+id/rb_five"
                 style="@style/Home_button"
-                android:drawableTop="@drawable/ic_home_five_24dp"
-                android:text="新知识" />
+                android:drawableTop="@drawable/selector_home_five"
+                android:text="新知识5" />
 
         </RadioGroup>
 
